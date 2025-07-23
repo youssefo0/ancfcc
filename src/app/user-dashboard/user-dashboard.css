@@ -1,0 +1,90 @@
+.container {
+    height: 100vh;
+    background: url('../../assets/images/background.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  .sidebar {
+    background: #c7a67c;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-info {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .user-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+    min-height: 100vh;
+  }
+  
+  .username {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .menu-button {
+    background-color: #b89570;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .menu-button::after {
+    content: "→";
+    float: right;
+  }
+  
+  .logout-button {
+    margin-top: auto;
+    background-color: #4c4fdd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #e7e6e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .background-img {
+    padding: 3px;
+    width: 100%;
+    max-height: 100%;
+    min-height: 100vh;
+    background: url('../../assets/images/background.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+
+    
+  }

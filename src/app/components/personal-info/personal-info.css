@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    width: 20%;
+    background-color: #e4c4a0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff;
+    margin: auto;
+  }
+  
+  .menu-btn {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    background: #a98c64;
+    border: none;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .menu-btn.active {
+    background-color: #d8972e;
+  }
+  
+  .logout {
+    margin-top: auto;
+    background: #4b4788;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .form-container {
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0ece9;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .form-box {
+    background-color: #d8ae82;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    margin-top: 5px;
+    border-radius: 4px;
+  }
+  
+  .date-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .date-row input {
+    width: 30%;
+  }
+  
+  .arabic-label {
+    margin-top: 10px;
+    text-align: right;
+    font-style: italic;
+  }
+  
+  .verify {
+    margin-top: 10px;
+    background-color: #b8a694;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+  }
+  
+  .actions {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+  }
+  
+  .actions .save,
+  .actions .cancel {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .actions .save {
+    background-color: #8a817c;
+    color: white;
+  }
+  
+  .actions .cancel {
+    background-color: #b4a69c;
+    color: white;
+  }
+  
