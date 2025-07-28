@@ -6,6 +6,7 @@
   
   .sidebar {
     width: 20%;
+    min-width: 200px;
     background-color: #e4c4a0;
     padding: 20px;
     display: flex;
@@ -60,6 +61,7 @@
     background-color: #f0ece9;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    gap: 20px;
   }
   
   .form-box {
@@ -68,6 +70,7 @@
     border-radius: 10px;
     width: 40%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 300px;
   }
   
   label {
@@ -129,5 +132,136 @@
   .actions .cancel {
     background-color: #b4a69c;
     color: white;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .sidebar {
+      width: 25%;
+      min-width: 180px;
+      padding: 15px;
+    }
+    
+    .form-container {
+      padding: 30px;
+      gap: 15px;
+    }
+    
+    .form-box {
+      min-width: 250px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+      min-height: 100vh;
+    }
+    
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px;
+      border-radius: 0;
+      min-width: auto;
+    }
+    
+    .profile {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+    
+    .avatar {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .menu-btn {
+      margin: 0 5px;
+      padding: 8px 12px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    
+    .logout {
+      margin-top: 0;
+      margin-left: 10px;
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+    
+    .form-container {
+      width: 100%;
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 0;
+      gap: 20px;
+    }
+    
+    .form-box {
+      width: 100%;
+      min-width: auto;
+    }
+    
+    .actions {
+      position: static;
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sidebar {
+      flex-wrap: wrap;
+      padding: 10px;
+      gap: 10px;
+    }
+    
+    .profile {
+      margin-right: 10px;
+    }
+    
+    .avatar {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .menu-btn {
+      padding: 6px 10px;
+      font-size: 11px;
+      margin: 0 2px;
+    }
+    
+    .logout {
+      padding: 6px 10px;
+      font-size: 11px;
+    }
+    
+    .form-container {
+      padding: 15px;
+    }
+    
+    .form-box {
+      padding: 15px;
+    }
+    
+    .date-row {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .date-row input {
+      width: 100%;
+    }
+    
+    .actions .save,
+    .actions .cancel {
+      padding: 8px 16px;
+      margin: 5px;
+      font-size: 12px;
+    }
   }
   
