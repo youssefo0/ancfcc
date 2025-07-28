@@ -47,4 +47,9 @@ export class LoginPageComponent {
     );
   }
 }
+export class TonComponent {
+  showInput = false;       // cache l'input au début
+  commentaire = '';        // valeur du champ
+}
+
 

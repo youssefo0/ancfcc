@@ -9,8 +9,8 @@
   }
   
   .sidebar {
-    background: #c7a67c;
-    width: 250px;
+    background: #c7a67c78;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +41,7 @@
   }
   
   .menu-button {
-    background-color: #b89570;
+    background-color: #b8957087;
     border: none;
     color: white;
     padding: 10px 15px;
@@ -59,7 +59,7 @@
   
   .logout-button {
     margin-top: auto;
-    background-color: #4c4fdd;
+    background-color: #ab6f0ea4;
     color: white;
     padding: 10px 20px;
     border: none;

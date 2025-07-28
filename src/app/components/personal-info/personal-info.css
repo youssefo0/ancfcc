@@ -6,7 +6,7 @@
   
   .sidebar {
     width: 20%;
-    background-color: #e4c4a0;
+    background-color: #b8957087;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -63,28 +63,34 @@
   }
   
   .form-box {
-    background-color: #d8ae82;
+    background-color: #aa8a688a;
     padding: 20px;
-    border-radius: 10px;
-    width: 40%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    width: 30%;
+    height: 530px; /* hauteur fixe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.714);
   }
   
   label {
     display: block;
-    margin-top: 10px;
+    margin-top: 40px;
     font-weight: bold;
   }
   
   input {
-    width: 100%;
+    width: 70%;
     padding: 5px;
     border: none;
-    margin-top: 5px;
-    border-radius: 4px;
+    margin-top: 10px;
+    border-radius: 6px;
+    display: block;       /* rendre l’input en bloc */
+    margin-left: 45px;    /* marge automatique à gauche */
+    margin-right: auto;   /* marge automatique à droite */
   }
   
   .date-row {
+    margin-left: -50px;    /* marge automatique à gauche */
+    margin-right: auto;   /* marge automatique à droite */
     display: flex;
     justify-content: space-between;
   }
@@ -100,18 +106,31 @@
   }
   
   .verify {
-    margin-top: 10px;
-    background-color: #b8a694;
+    margin-top: 11px;
+    background-color: #9e968d;
     border: none;
-    padding: 6px;
-    border-radius: 5px;
+    padding: 7px;
+    border-radius: 10px;
+    margin-left: 120px;    /* marge automatique à gauche */
   }
   
-  .actions {
-    position: absolute;
-    bottom: 30px;
-    right: 50px;
-  }
+ .actions {
+  position: fixed;
+  bottom: 50px; /* distance du bas */
+  left: 60%;
+  transform: translateX(-50%); /* centrer horizontalement */
+  display: flex;
+  justify-content: center;
+}
+
+.actions .save,
+.actions .cancel {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
   
   .actions .save,
   .actions .cancel {
@@ -119,6 +138,7 @@
     margin-left: 10px;
     border: none;
     border-radius: 5px;
+    
   }
   
   .actions .save {

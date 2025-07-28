@@ -15,7 +15,7 @@
 .header {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   position: relative;
   z-index: 1;
 }
@@ -28,19 +28,19 @@
 
 .logo {
   width: auto;
-  height: 120px;
+  height: 100px;
   border-radius: 8px;
   object-fit: contain;
 }
 
 
 .login-container {
-  max-width: 600px;
+  max-width: 400px;
   width: 100%;
-  background: rgba(212, 196, 168, 0.9);
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  background: rgba(212, 196, 168, 0.561);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.472);
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 1;
@@ -62,7 +62,7 @@
 .login-title {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #000000cf;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -70,7 +70,7 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1px;
 }
 
 .form-group {
