@@ -126,7 +126,14 @@ label {
   direction: rtl;
   text-align: right;
 }
-
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
 input[type="text"],
 input[type="tel"],
 select {

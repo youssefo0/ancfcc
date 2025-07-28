@@ -97,6 +97,15 @@ input[type="tel"] {
   transition: all 0.3s ease;
 }
 
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
 input[type="text"]:focus,
 input[type="tel"]:focus {
   outline: none;
