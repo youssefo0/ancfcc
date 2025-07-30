@@ -32,6 +32,7 @@
   height: 120px;
   border-radius: 8px;
   object-fit: contain;
+  max-width: 100%;
 }
 
 
@@ -126,7 +127,14 @@ label {
   direction: rtl;
   text-align: right;
 }
-
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
 input[type="text"],
 input[type="tel"],
 select {
@@ -235,7 +243,52 @@ select:focus {
   cursor: not-allowed;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .logo {
+    height: 100px;
+  }
+  
+  .form-container {
+    padding: 25px;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .logo {
+    height: 80px;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .steps {
+    margin-bottom: 20px;
+  }
+  
+  .step {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .step-line {
+    width: 80px;
+  }
+  
+  .form-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+  
   .form-row {
     flex-direction: column;
     gap: 10px;
@@ -251,6 +304,81 @@ select:focus {
   
   .date-row {
     flex-wrap: wrap;
+  }
+  
+  .verify-btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .submit-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+  
+  .arabic-text {
+    font-size: 14px;
+  }
+  
+  .french-text {
+    font-size: 10px;
+  }
+  
+  .step {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .step-line {
+    width: 60px;
+    margin: 0 5px;
+  }
+  
+  .form-container {
+    padding: 15px;
+  }
+  
+  label {
+    font-size: 12px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  select {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .verify-btn {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  
+  .captcha {
+    padding: 10px;
+    font-size: 12px;
+    min-width: 50px;
+  }
+  
+  .refresh-captcha {
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .submit-btn {
+    padding: 12px 25px;
+    font-size: 14px;
   }
 }
 

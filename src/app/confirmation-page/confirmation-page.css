@@ -11,22 +11,7 @@
   align-items: center;
 }
 
-.container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
-  background-size: 100px 100px;
-  background-position: 0 0, 0 50px, 50px -50px, -50px 0px;
-  pointer-events: none;
-}
+
 
 .header {
   display: flex;
@@ -47,6 +32,7 @@
   height: 120px;
   border-radius: 8px;
   object-fit: contain;
+  max-width: 100%;
 }
 
 .agency-text {
@@ -295,7 +281,52 @@ select:focus {
   cursor: not-allowed;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .logo {
+    height: 100px;
+  }
+  
+  .form-container {
+    padding: 25px;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .logo {
+    height: 80px;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .steps {
+    margin-bottom: 20px;
+  }
+  
+  .step {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .step-line {
+    width: 80px;
+  }
+  
+  .form-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+  
   .form-row {
     flex-direction: column;
     gap: 10px;
@@ -303,10 +334,115 @@ select:focus {
   
   .captcha-row {
     flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .captcha-display {
+    min-width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .legal-text {
+    font-size: 11px;
+    padding: 12px;
+  }
+  
+  .checkbox-container {
+    font-size: 12px;
   }
   
   .form-actions {
     flex-direction: column;
+    gap: 15px;
+  }
+  
+  .back-btn,
+  .submit-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+  
+  .arabic-text {
+    font-size: 14px;
+  }
+  
+  .french-text {
+    font-size: 10px;
+  }
+  
+  .step {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .step-line {
+    width: 60px;
+    margin: 0 5px;
+  }
+  
+  .form-container {
+    padding: 15px;
+  }
+  
+  .confirmation-section h3 {
+    font-size: 16px;
+  }
+  
+  label {
+    font-size: 12px;
+  }
+  
+  input[type="text"],
+  select {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .captcha-display {
+    padding: 10px 15px;
+    font-size: 14px;
+    min-width: 70px;
+  }
+  
+  .refresh-captcha {
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .legal-text {
+    font-size: 10px;
+    padding: 10px;
+  }
+  
+  .legal-text .arabic-text {
+    font-size: 12px;
+  }
+  
+  .checkbox-container {
+    font-size: 11px;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    transform: scale(1.1);
+  }
+  
+  .back-btn,
+  .submit-btn {
+    padding: 12px 15px;
+    font-size: 12px;
+    min-width: 100px;
   }
 }
 

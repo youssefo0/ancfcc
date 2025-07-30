@@ -3,9 +3,7 @@
     background: url('../../assets/images/background.png') no-repeat center center;
     background-size: cover;
     display: flex;
-    height: 100vh;
     font-family: Arial, sans-serif;
-    
   }
   
   .sidebar {
@@ -18,6 +16,7 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
   }
   
   .user-info {
@@ -31,7 +30,6 @@
     border-radius: 50%;
     object-fit: cover;
     background-color: #fff;
-    min-height: 100vh;
   }
   
   .username {
@@ -78,13 +76,116 @@
   }
   
   .background-img {
-    padding: 3px;
+    padding: 20px;
     width: 100%;
     max-height: 100%;
     min-height: 100vh;
     background: url('../../assets/images/background.png') no-repeat center center;
     background-size: cover;
-    padding: 20px;
+  }
 
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .sidebar {
+      width: 200px;
+      padding: 15px;
+    }
     
+    .menu-button {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+      min-height: 100vh;
+    }
+    
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      border-radius: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow-x: auto;
+    }
+    
+    .user-info {
+      margin-bottom: 0;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    
+    .user-logo {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .menu-button {
+      margin: 0 5px;
+      padding: 8px 12px;
+      font-size: 12px;
+      white-space: nowrap;
+      min-width: auto;
+    }
+    
+    .logout-button {
+      margin-top: 0;
+      margin-left: 10px;
+      padding: 8px 15px;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    
+    .main-content {
+      border-radius: 0;
+      min-height: calc(100vh - 100px);
+    }
+    
+    .background-img {
+      padding: 15px;
+      min-height: calc(100vh - 100px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sidebar {
+      padding: 10px 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .user-info {
+      margin-right: 10px;
+    }
+    
+    .user-logo {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .username {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    
+    .menu-button {
+      padding: 6px 10px;
+      font-size: 11px;
+      margin: 0 2px;
+    }
+    
+    .logout-button {
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+    
+    .background-img {
+      padding: 10px;
+    }
   }
