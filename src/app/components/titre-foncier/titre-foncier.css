@@ -17,6 +17,8 @@
   padding: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+    border-radius: 15px;
+  box-shadow: 0 0 8px #6c646489;
 }
 
 .user-info {
@@ -101,4 +103,11 @@
 .card-action img {
   width: 25px;
   cursor: pointer;
+}
+.card-action {
+  display: flex;
+  justify-content: center;   /* centre les images horizontalement */
+  align-items: center;       /* les aligne verticalement */
+  gap: 10px;                 /* espace entre les deux images */
+  margin-top: 10px;
 }
