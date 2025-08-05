@@ -10,7 +10,7 @@
   
   .sidebar {
     background: #c7a67c78;
-    width: 200px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +35,7 @@
   }
   
   .username {
-    margin-top: 10px;
+    margin-top: -10px;
     font-weight: bold;
     color: #333;
   }
@@ -88,3 +88,33 @@
 
     
   }
+  .images-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* espace entre les images */
+  padding: 20px;
+}
+
+.images-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* coins arrondis */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ombre douce */
+}
+.image-row {
+  display: flex;
+  justify-content: center;   /* centre les images horizontalement */
+  align-items: center;       /* les aligne verticalement */
+  gap: 50px;                 /* espace entre les deux images */
+  margin-top: 10px;
+  padding-left: 200px;           /* optionnel : espace depuis le bord gauche */
+
+}
+
+
+.small-img {
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+}

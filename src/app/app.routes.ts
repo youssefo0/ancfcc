@@ -4,6 +4,7 @@ import { SignupPageComponent } from './signup-page/signup-page';
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page';
 import { UserDashboard } from './user-dashboard/user-dashboard';
 import { PersonalInfo } from './components/personal-info/personal-info';
+import { TitreFoncierComponent } from './components/titre-foncier/titre-foncier';
 
 
 
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'dashboard', component: UserDashboard },
   { path: 'info', component: PersonalInfo },
+  { path: 'titre-foncier', component: TitreFoncierComponent },
   { path: 'signup', component: SignupPageComponent },
   { path: 'confirmation', component: ConfirmationPageComponent },
   { path: '**', redirectTo: '/login' }

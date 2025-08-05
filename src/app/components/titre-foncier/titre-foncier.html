@@ -1,0 +1,33 @@
+<div class="container">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="user-info">
+      <img src="./assets/images/user-logo.png" alt="User" class="user-icon" />
+      <p class="username">User name</p>
+    </div>
+       <button class="menu-button"> Information perso </button>
+      <button class="menu-button active"> Titre foncier  </button>
+      <button class="menu-button"> Historique </button>
+
+
+     <button class="logout-button"> Déconnecte </button>
+  </div>
+  
+
+  <!-- Content -->
+  <div class="content">
+    <div class="card" *ngFor="let item of titres">
+      <div class="card-icon">
+        <img src="../../../assets/house-icon.png" alt="Maison" />
+      </div>
+      <div class="card-info">
+        <h3>Conservation foncière</h3>
+        <p>N° du titre</p>
+        <p>Date</p>
+      </div>
+      <div class="card-action">
+        <img src="./public/star-icon.png" alt="Favori" />
+      </div>
+    </div>
+  </div>
+</div>
