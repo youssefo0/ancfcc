@@ -58,7 +58,12 @@
     content: "→";
     float: right;
   }
-  
+  .icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  vertical-align: middle;
+}
   .logout-button {
     margin-top: auto;
     background-color: #ab6f0ea4;
