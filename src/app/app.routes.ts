@@ -12,7 +12,7 @@ import { TitreFoncierComponent } from './components/titre-foncier/titre-foncier'
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginPageComponent },
-  { path: 'dashboard', component: UserDashboard },
+  { path: 'user-dashboard', component: UserDashboard },
   { path: 'info', component: PersonalInfo },
   { path: 'titre-foncier', component: TitreFoncierComponent },
   { path: 'signup', component: SignupPageComponent },
