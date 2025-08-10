@@ -12,7 +12,7 @@
   </div>
 
   <div class="form-container">
-    <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+    <form (ngSubmit)="goToConfirmation()" #signupForm="ngForm">
       <div class="form-row">
         <div class="form-group">
           <label for="nom">Nom :</label>
@@ -44,7 +44,7 @@
           <div class="phone-row">
             <input type="tel" id="telephone" name="telephone" [(ngModel)]="formData.telephone" required>
             <button type="button" class="verify-btn" (click)="verifyPhone()">Vérifier</button>
-            <input type="text" class="verification-code" placeholder="Code" [(ngModel)]="formData.verificationCode">
+            <input type="text" class="verification-code" placeholder="Code" [(ngModel)]="formData.verificationCode" required>
             <div class="captcha">X59mn</div>
             <button type="button" class="refresh-captcha" (click)="refreshCaptcha()">↻</button>
           </div>

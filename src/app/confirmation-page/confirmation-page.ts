@@ -22,13 +22,7 @@ export class ConfirmationPageComponent {
 
   constructor(private router: Router) {}
 
-  onSubmit() {
-    if (this.isFormValid()) {
-      console.log('Confirmation form submitted:', this.formData);
-      // Navigate to next step or process the form
-      alert('Form submitted successfully!');
-    }
-  }
+  
 
   goBack() {
     this.router.navigate(['/signup']);
@@ -40,11 +34,20 @@ export class ConfirmationPageComponent {
     // Generate new captcha code
   }
 
+  submitForm() {
+    if (this.isFormValid()) {
+      console.log('Confirmation form submitted:', this.formData);
+      // Navigate to next step or process the form
+      alert('Form submitted successfully!');
+    }
+  }
+
   private isFormValid(): boolean {
     return !!(
       this.formData.conservation &&
       this.formData.numeroTitre &&
       this.formData.indice &&
+      this.formData.indiceSpecial &&
       this.formData.captchaInput &&
       this.formData.acceptTerms
     );

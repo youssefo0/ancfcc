@@ -54,12 +54,7 @@ export class SignupPageComponent {
     }
   }
 
-  onSubmit() {
-    if (this.isFormValid()) {
-      console.log('Form submitted:', this.formData);
-      this.router.navigate(['/confirmation']);
-    }
-  }
+  
 
   verifyPhone() {
     console.log('Verifying phone number:', this.formData.telephone);
@@ -71,6 +66,12 @@ export class SignupPageComponent {
     // Implement captcha refresh logic
   }
 
+  goToConfirmation() {
+    if (this.isFormValid()) {
+      this.router.navigate(['/confirmation']);
+    }
+  }
+
   private isFormValid(): boolean {
     return !!(
       this.formData.nom &&
@@ -78,6 +79,7 @@ export class SignupPageComponent {
       this.formData.adresse &&
       this.formData.adresseAr &&
       this.formData.telephone &&
+      this.formData.verificationCode &&
       this.formData.jour &&
       this.formData.mois &&
       this.formData.annee &&
