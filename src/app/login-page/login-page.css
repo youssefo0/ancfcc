@@ -35,7 +35,7 @@
 
 
 .login-container {
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
   background: rgba(212, 196, 168, 0.561);
   padding: 30px;
@@ -104,12 +104,49 @@ input[type="tel"]:focus {
   background: rgba(255, 255, 255, 1);
 }
 
+.phone-input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.area-code-input {
+  width: 80px;
+}
+
+.phone-number-input {
+  flex: 1;
+}
+
 .phone-verification {
   display: flex;
   gap: 10px;
   align-items: stretch;
+  margin-top: 10px;
+}
+.verification-code-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-start;
 }
 
+.verification-code-input {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+  transition: border-color 0.3s;
+}
+
+.verification-code-input:focus {
+  border-color: #4a90a4;
+  outline: none;
+  background: rgba(255,255,255,1);
+}
 .phone-verification input[type="tel"] {
   flex: 1;
 }
@@ -197,3 +234,31 @@ input[type="tel"]:focus {
   }
 }
 
+.verification-popup {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.verification-popup-content {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 20px;
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
