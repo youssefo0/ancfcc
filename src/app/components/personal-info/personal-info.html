@@ -1,49 +1,57 @@
+<!-- Only the main structure is shown, adjust your fields as needed -->
 <div class="container">
-    <div class="sidebar">
-      <div class="profile">
-        <img src="assets/images/user-logo.png" alt="User" class="avatar" />
-        <p class="username">User name</p>
-      </div>
-      <button class="menu-btn active">Information perso</button>
-      <button class="menu-btn">Titre foncier</button>
-      <button class="menu-btn">Historique</button>
-      <button class="logout">Déconnecte</button>
+  <div class="sidebar">
+    <div class="profile">
+      <img src="assets/images/user-logo.png" alt="User" class="avatar" />
+      <p class="username">User name</p>
     </div>
-  
-    <div class="form-container">
-      
-      <div class="form-box">
-        <label>Nom :</label>
-        <input type="text" required />
-        <label>Prénom :</label>
-        <input type="text" required />
-        <label>CIN :</label>
-        <input type="text" required />
-        <label>Date de naissance :</label>
-        <div class="date-row">
-          <input type="number" placeholder="JJ" required />
-          <input type="number" placeholder="MM" required />
-          <input type="number" placeholder="AAAA" required />
+    <button class="menu-btn active">Information perso</button>
+    <button class="menu-btn">Titre foncier</button>
+    <button class="menu-btn">Historique</button>
+    <button class="logout">Déconnecte</button>
+  </div>
+
+  <div class="profile-main-card">
+    <h2 class="profile-title">Mon Profil Personnel</h2>
+    <div class="profile-content-row">
+      <div class="profile-info-card">
+        <div class="profile-header">
+          <img src="assets/images/user-logo.png" alt="User" class="avatar-large" />
+          <div>
+            <div class="profile-name">Admin Admin</div>
+            <div class="profile-role">Médecin</div>
+          </div>
         </div>
-        <p class="arabic-label">الاسم الشخصي الكامل</p>
-        <input type="text" required />
+        <div class="profile-section">
+          <div class="section-title">
+            <span class="icon-info"></span>
+            Informations Personnelles
+          </div>
+          <div class="section-list">
+            <div>Email: <span>alaegtav2004gmail.com</span></div>
+            <div>Nom: <span>Admin</span></div>
+            <div>Prénom: <span>Admin</span></div>
+            <div>Date de naissance: <span>2004-07-15</span></div>
+          </div>
+        </div>
+        <div class="profile-actions">
+          <button class="btn btn-primary">Modifier le profil</button>
+          <button class="btn btn-secondary">Changer mot de passe</button>
+          <button class="btn btn-secondary">Supprimer votre compte</button>
+        </div>
       </div>
-  
-      <div class="form-box">
-        <label>Adresse :</label>
-        <input type="text" required />
-        <label>Courrier électronique :</label>
-        <input type="email" required />
-        <label>Numéro de téléphone :</label>
-        <input type="tel" required />
-        <button class="verify">vérifier</button>
-        <input type="text" placeholder="Code vérification" required />
-      </div>
-  
-      <div class="actions">
-        <button class="save">Sauvegarde</button>
-        <button class="cancel">Annule</button>
+      <div class="profile-details-card">
+        <div class="section-title">
+          <span class="icon-details"></span>
+          Détails
+        </div>
+        <div class="section-list">
+          <div>Phone Number: <span>+212 6 28 61 59 28</span></div>
+          <div>Adresse: <span>Avenue Oqba, Angle Rue Assouhaili, Rabat 10000</span></div>
+          <div>Rôle: <span>Médecin</span></div>
+          <div>État: <span>Actif</span></div>
+        </div>
       </div>
     </div>
   </div>
-  
+</div>
