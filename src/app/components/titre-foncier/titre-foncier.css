@@ -195,11 +195,70 @@
   gap: 10px;                 /* espace entre les deux images */
   margin-top: 10px;
 }
+/* Filters row styles */
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 12px;
+  margin-left: 15px;
+}
+
+.search-input {
+  flex: 2;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #e9e3db;
+  font-size: 15px;
+  background: #f5f0e6;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #a67d3c;
+}
+
+.filter-select {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e9e3db;
+  font-size: 15px;
+  background: #f5f0e6;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-select:focus {
+  border-color: #a67d3c;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .filters-row {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 8px;
+  }
+  .search-input,
+  .filter-select {
+    width: 100%;
+    min-width: 0;
+  }
+}
 /* Card container for property cards */
 .cards-row {
   display: flex;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 28px;
+  margin-top: 15px;
+  flex-direction: row;
+  padding: 28px;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
@@ -209,9 +268,9 @@
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-  padding: 28px 24px;
+  padding: 28px 28px;
   min-width: 320px;
-  max-width: 380px;
+  max-width: 480px;
   height: 600px;
   display: flex;
   flex-direction: column;
