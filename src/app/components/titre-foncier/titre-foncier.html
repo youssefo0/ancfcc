@@ -14,22 +14,165 @@
   </div>
   
 
-  <!-- Content -->
-  <div class="content">
-    <div class="card" *ngFor="let item of titres">
-      <div class="card-icon">
-        <img src="../../../assets/house-icon.png" alt="Maison" />
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="header-row">
+      <h2>Conservation Foncière</h2>
+      <button class="new-title-btn">
+        <span class="icon"><img src="../../../assets/add-icon.png" alt="Nouveau Titre" width="18" /></span>
+        + Nouveau Titre
+      </button>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value">127</div>
+        <div class="stat-label">Total Propriétés</div>
       </div>
-      <div class="card-info">
-        <h3>Conservation foncière</h3>
-        <p>N° du titre</p>
-        <p>Date</p>
+      <div class="stat-card">
+        <div class="stat-value">89</div>
+        <div class="stat-label">Actives</div>
       </div>
-      <div class="card-action">
-        <img src="./assets/bell (1).png" alt="Favori" />
-        <img src="./assets/bell.png" alt="Favori" />
-        
-
+      <div class="stat-card">
+        <div class="stat-value">28</div>
+        <div class="stat-label">En location</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">10</div>
+        <div class="stat-label">Maintenance</div>
+      </div>
+    </div>
+    <div class="filters-row">
+      <input type="text" class="search-input" placeholder="Rechercher par adresse, titre..." />
+      <select class="filter-select">
+        <option>Tous les statuts</option>
+        <option>Actif</option>
+        <option>En location</option>
+        <option>Maintenance</option>
+      </select>
+      <select class="filter-select">
+        <option>Tous les types</option>
+        <option>Villa</option>
+        <option>Bureau</option>
+        <option>Terrain</option>
+      </select>
+      <select class="filter-select">
+        <option>Toutes les zones</option>
+        <option>Agdal</option>
+        <option>Hay Riad</option>
+        <option>Témara</option>
+      </select>
+    </div>
+    <div class="cards-row">
+      <!-- Card 1 -->
+      <div class="property-card">
+        <div class="property-header">
+          <span class="property-icon"><img src="../../../assets/house-icon.png" alt="Villa" width="32" /></span>
+          <span class="property-title">Villa Moderne Agdal</span>
+          <span class="property-edit"><img src="../../../assets/edit-icon.png" alt="Edit" width="18" /></span>
+          <span class="property-actions">
+            <img src="../../../assets/eye-icon.png" alt="Voir" width="18" />
+            <img src="../../../assets/favorite-icon.png" alt="Favori" width="18" />
+          </span>
+        </div>
+        <div class="property-location">
+          <span class="location-icon"><img src="../../../assets/location-icon.png" alt="Location" width="14" /></span>
+          Avenue Hassan II, Rabat
+        </div>
+        <span class="status actif">ACTIF</span>
+        <div class="property-info-row">
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/title-icon.png" alt="Titre" width="14" /></span>
+            N° Titre <b>TF-2024-001</b>
+          </div>
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/area-icon.png" alt="Surface" width="14" /></span>
+            Surface <b>250 m²</b>
+          </div>
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/bedroom-icon.png" alt="Chambres" width="14" /></span>
+            Chambres <b>4 chambres</b>
+          </div>
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/user.png" alt="Propriétaire" width="14" /></span>
+            Propriétaire <b>Ahmed Benali</b>
+          </div>
+        </div>
+        <div class="property-price">850,000 MAD</div>
+        <div class="property-update">Mis à jour le 08 Août 2025</div>
+      </div>
+      <!-- Card 2 -->
+      <div class="property-card">
+        <div class="property-header">
+          <span class="property-icon"><img src="../../../assets/office-icon.png" alt="Bureau" width="32" /></span>
+          <span class="property-title">Bureau Commercial Hay Riad</span>
+          <span class="property-edit"><img src="../../../assets/edit-icon.png" alt="Edit" width="18" /></span>
+          <span class="property-actions">
+            <img src="../../../assets/eye-icon.png" alt="Voir" width="18" />
+            <img src="../../../assets/favorite-icon.png" alt="Favori" width="18" />
+          </span>
+        </div>
+        <div class="property-location">
+          <span class="location-icon"><img src="../../../assets/location-icon.png" alt="Location" width="14" /></span>
+          Quartier Hay Riad, Rabat
+        </div>
+        <span class="status location">EN LOCATION</span>
+        <div class="property-info-row">
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/title-icon.png" alt="Titre" width="14" /></span>
+            N° Titre <b>TF-2024-002</b>
+          </div>
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/area-icon.png" alt="Surface" width="14" /></span>
+            Surface <b>120 m²</b>
+          </div>
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/tenant-icon.png" alt="Locataire" width="14" /></span>
+            Locataire <b>TechCorp SARL</b>
+          </div>
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/rent-icon.png" alt="Loyer" width="14" /></span>
+            Loyer mensuel <b>12,000 MAD</b>
+          </div>
+        </div>
+        <div class="property-price">1,200,000 MAD</div>
+        <div class="property-update">Contrat expire: Mars 2026</div>
+      </div>
+      <!-- Card 3 -->
+      <div class="property-card">
+        <div class="property-header">
+          <span class="property-icon"><img src="../../../assets/tree-icon.png" alt="Terrain" width="32" /></span>
+          <span class="property-title">Terrain Résidentiel Témara</span>
+          <span class="property-edit"><img src="../../../assets/edit-icon.png" alt="Edit" width="18" /></span>
+          <span class="property-actions">
+            <img src="../../../assets/eye-icon.png" alt="Voir" width="18" />
+            <img src="../../../assets/favorite-icon.png" alt="Favori" width="18" />
+          </span>
+        </div>
+        <div class="property-location">
+          <span class="location-icon"><img src="../../../assets/location-icon.png" alt="Location" width="14" /></span>
+          Lotissement Al Wifaq, Témara
+        </div>
+        <span class="status maintenance">MAINTENANCE</span>
+        <div class="property-info-row">
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/title-icon.png" alt="Titre" width="14" /></span>
+            N° Titre <b>TF-2024-003</b>
+          </div>
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/area-icon.png" alt="Surface" width="14" /></span>
+            Surface <b>500 m²</b>
+          </div>
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/work-icon.png" alt="Travaux" width="14" /></span>
+            Travaux <b>Clôture en cours</b>
+          </div>
+          <div class="property-info">
+            <span class="info-icon"><img src="../../../assets/calendar-icon.png" alt="Fin prévue" width="14" /></span>
+            Fin prévue <b>15 Sept 2025</b>
+          </div>
+        </div>
+        <div class="property-price">320,000 MAD</div>
+        <div class="property-update">Dernière inspection: 05 Août 2025</div>
       </div>
     </div>
   </div>

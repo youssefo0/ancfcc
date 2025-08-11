@@ -111,6 +111,7 @@ input[type="tel"]:focus {
 
 .area-code-input {
   width: 80px;
+  border-radius: 8px;
 }
 
 .phone-number-input {

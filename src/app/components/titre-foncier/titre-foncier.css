@@ -81,7 +81,44 @@
   flex-direction: column;
   gap: 50px;
 }
+/* Header row styles */
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 22px 32px;
+  margin-bottom: 28px;
+}
 
+.header-row h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #a67d3c;
+  margin: 0;
+}
+
+.new-title-btn {
+  background: #ff7e29;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(255,126,41,0.12);
+  transition: background 0.2s;
+}
+
+.new-title-btn:hover {
+  background: #ff9e57;
+}
 .card {
   background-color: #d8b17e8f;
   display: flex;
@@ -91,6 +128,53 @@
   box-shadow: 0 0 8px #6c646489;
 }
 
+/* Stats row styles */
+.stats-row {
+  display: flex;
+  gap: 28px;
+  margin: 24px 0 32px 0;
+  justify-content: flex-start;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 22px 32px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff7e29;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 15px;
+  color: #a67d3c;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .stats-row {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .stat-card {
+    min-width: 120px;
+    padding: 14px 10px;
+  }
+  .stat-value {
+    font-size: 22px;
+  }
+}
 .card-icon img {
   width: 50px;
 }
@@ -110,4 +194,161 @@
   align-items: center;       /* les aligne verticalement */
   gap: 10px;                 /* espace entre les deux images */
   margin-top: 10px;
+}
+/* Card container for property cards */
+.cards-row {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Individual property card */
+.property-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 28px 24px;
+  min-width: 320px;
+  max-width: 380px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.property-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Header row inside card */
+.property-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.property-icon img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #f5f0e6;
+  padding: 6px;
+}
+
+.property-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #a67d3c;
+  flex: 1;
+}
+
+.property-edit img,
+.property-actions img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+.property-edit img:hover,
+.property-actions img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+.property-location {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.location-icon img {
+  width: 14px;
+  height: 14px;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.status.actif {
+  background: #4ecb71;
+}
+
+.status.location {
+  background: #ffb366;
+  color: #a67d3c;
+}
+
+.status.maintenance {
+  background: #f7b2b2;
+  color: #a67d3c;
+}
+
+/* Info grid inside card */
+.property-info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+  margin-bottom: 10px;
+}
+
+.property-info {
+  background: #f5f0e6;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.info-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+.property-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff6a00;
+  margin-top: 10px;
+}
+
+.property-update {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .cards-row {
+    gap: 18px;
+  }
+  .property-card {
+    min-width: 220px;
+    max-width: 100%;
+    padding: 18px 10px;
+  }
+  .property-title {
+    font-size: 16px;
+  }
 }
