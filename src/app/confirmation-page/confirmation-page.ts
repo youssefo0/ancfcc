@@ -36,9 +36,7 @@ export class ConfirmationPageComponent {
 
   submitForm() {
     if (this.isFormValid()) {
-      console.log('Confirmation form submitted:', this.formData);
-      // Navigate to next step or process the form
-      alert('Form submitted successfully!');
+     
       this.router.navigate(['/user-dashboard']);
     }
   }
