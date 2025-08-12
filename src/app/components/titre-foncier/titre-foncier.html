@@ -5,20 +5,20 @@
       <img src="./assets/images/user-logo.png" alt="User" class="user-icon" />
       <p class="username">User name</p>
     </div>
-      <button class="menu-button">
+      <button class="menu-button" routerLink="/info-per">
         <span class="icon"><img src="../../assets/user.png" alt="Perso" width="20" /></span>
         Information perso
       </button>
-      <button class="menu-button">
+      <button class="menu-button" routerLink="/titre-foncier">
         <span class="icon"><img src="../../assets/title.png" alt="Titre foncier" width="20" /></span>
         Titre foncier
       </button>
-      <button class="menu-button">
+      <button class="menu-button" routerLink="/historique">
         <span class="icon"><img src="../../assets/order-history.png" alt="Historique" width="20" /></span>
         Historique
       </button>
   
-      <button class="logout-button">
+      <button class="logout-button" (click)="logout()">
         <span class="icon"><img src="../../assets/logout.png" alt="Déconnecte" width="20" /></span>
         Déconnecte
       </button>
@@ -88,15 +88,11 @@
           </div>
           <div class="property-info">
             <span class="info-icon"></span>
-            Surface <b>250 m²</b>
+            Indice <b>2</b>
           </div>
           <div class="property-info">
             <span class="info-icon"></span>
-            Chambres <b>4 chambres</b>
-          </div>
-          <div class="property-info">
-            <span class="info-icon"></span>
-            Propriétaire <b>Ahmed Benali</b>
+            Indice special <b>A</b>
           </div>
         </div>
         <div class="property-price">850,000 MAD</div>
@@ -120,15 +116,11 @@
           </div>
           <div class="property-info">
             <span class="info-icon"></span>
-            Indice <b>120 m²</b>
+            Indice <b>1</b>
           </div>
           <div class="property-info">
             <span class="info-icon"></span>
-            Indice special <b>TechCorp SARL</b>
-          </div>
-          <div class="property-info">
-            <span class="info-icon"></span>
-            Loyer mensuel <b>12,000 MAD</b>
+            Indice special <b>B</b>
           </div>
         </div>
         <div class="property-price">1,200,000 MAD</div>

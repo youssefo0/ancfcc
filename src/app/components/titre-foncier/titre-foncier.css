@@ -3,7 +3,6 @@
     background: url('/assets/images/background.png') no-repeat center center;
     background-size: cover;
     display: flex;
-    
     font-family: Arial, sans-serif;
     
   }
@@ -264,7 +263,7 @@
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   padding: 12px;
   margin: 15px;
-  
+  width: 1080px;
 }
 
 .search-input {
@@ -330,7 +329,7 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   padding: 12px 28px;
   min-width: 320px;
-  max-width: 580px;
+  width: 480px;
   display: flex;
   flex-direction: column;
   gap: 18px;

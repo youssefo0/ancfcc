@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-titre-foncier',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './titre-foncier.html',
   styleUrl: './titre-foncier.css'
 })
@@ -22,6 +23,8 @@ export class TitreFoncierComponent {
     indice: '',
     indiceSpecial: '',
   };
+
+  constructor(private router: Router) { }
 
   generateCaptcha(): void {
     const a = Math.floor(Math.random() * 10) + 1;
@@ -58,5 +61,11 @@ export class TitreFoncierComponent {
       indiceSpecial: '',
     };
     this.captchaInput = '';
+  }
+
+  logout(): void {
+    // Implement your logout logic here, e.g., clear session, navigate to login
+    alert('Logging out...');
+    this.router.navigate(['/login']); // Example: navigate to login page after logout
   }
 }
