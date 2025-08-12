@@ -29,7 +29,7 @@
   <div class="main-content">
     <div class="header-row">
       <h2>Conservation Foncière</h2>
-      <button class="new-title-btn">
+      <button class="new-title-btn" (click)="openAddTitreModal()">
         <span class="icon"><img src="../../../assets/add.png"width="18" /></span>Nouveau Titre
       </button>
     </div>
@@ -137,67 +137,31 @@
       
     </div>
   <!-- Add this just before the closing </div> of .main-content -->
-<div id="addTitreModal" class="modal-overlay" style="display:none;">
+<div id="addTitreModal" class="modal-overlay" [style.display]="showAddTitreModal ? 'flex' : 'none'">
   <div class="modal-content">
     <h3>Ajouter un Titre Foncier</h3>
-    <form id="addTitreForm">
+    <form (ngSubmit)="submitAddTitreForm()">
       <label for="conservation">Conservation foncière:</label>
-      <input type="text" id="conservation" name="conservation" required />
+      <input type="text" id="conservation" name="conservation" [(ngModel)]="newTitre.conservation" required />
 
       <label for="numeroTitre">Numéro titre:</label>
-      <input type="text" id="numeroTitre" name="numeroTitre" required />
+      <input type="text" id="numeroTitre" name="numeroTitre" [(ngModel)]="newTitre.numeroTitre" required />
 
       <label for="indice">Indice:</label>
-      <input type="text" id="indice" name="indice" required />
+      <input type="text" id="indice" name="indice" [(ngModel)]="newTitre.indice" required />
 
       <label for="indiceSpecial">Indice spécial:</label>
-      <input type="text" id="indiceSpecial" name="indiceSpecial" />
+      <input type="text" id="indiceSpecial" name="indiceSpecial" [(ngModel)]="newTitre.indiceSpecial" />
 
-      <label for="captcha">Captcha: <span id="captcha-question"></span></label>
-      <input type="text" id="captcha" name="captcha" required />
+      <label for="captcha">Captcha: <span>{{ captchaQuestion }}</span></label>
+      <input type="text" id="captcha" name="captcha" [(ngModel)]="captchaInput" required />
 
       <div class="modal-actions">
         <button type="submit" class="btn btn-primary">Ajouter</button>
-        <button type="button" class="btn btn-secondary" id="closeModalBtn">Annuler</button>
+        <button type="button" class="btn btn-secondary" (click)="closeAddTitreModal()">Annuler</button>
       </div>
     </form>
   </div>
 </div>
 </div>
 </div>
-<script>
-  // Simple captcha generator
-  function generateCaptcha() {
-    const a = Math.floor(Math.random() * 10) + 1;
-    const b = Math.floor(Math.random() * 10) + 1;
-    document.getElementById('captcha-question').textContent = `${a} + ${b} = ?`;
-    return a + b;
-  }
-
-  let captchaAnswer = 0;
-
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.new-title-btn').onclick = function() {
-      document.getElementById('addTitreModal').style.display = 'flex';
-      captchaAnswer = generateCaptcha();
-    };
-
-    document.getElementById('closeModalBtn').onclick = function() {
-      document.getElementById('addTitreModal').style.display = 'none';
-      document.getElementById('addTitreForm').reset();
-    };
-
-    document.getElementById('addTitreForm').onsubmit = function(e) {
-      e.preventDefault();
-      const captchaInput = document.getElementById('captcha').value;
-      if (parseInt(captchaInput) !== captchaAnswer) {
-        alert('Captcha incorrect !');
-        return;
-      }
-      // Handle form submission here (e.g., send data to backend)
-      alert('Titre foncier ajouté !');
-      document.getElementById('addTitreModal').style.display = 'none';
-      document.getElementById('addTitreForm').reset();
-    };
-  });
-</script>
