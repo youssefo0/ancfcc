@@ -13,7 +13,7 @@ export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginPageComponent },
   { path: 'user-dashboard', component: UserDashboard },
-  { path: 'info', component: PersonalInfo },
+  { path: 'info-per', component: PersonalInfo },
   { path: 'titre-foncier', component: TitreFoncierComponent },
   { path: 'signup', component: SignupPageComponent },
   { path: 'confirmation', component: ConfirmationPageComponent },

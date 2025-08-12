@@ -136,5 +136,68 @@
       </div>
       
     </div>
+  <!-- Add this just before the closing </div> of .main-content -->
+<div id="addTitreModal" class="modal-overlay" style="display:none;">
+  <div class="modal-content">
+    <h3>Ajouter un Titre Foncier</h3>
+    <form id="addTitreForm">
+      <label for="conservation">Conservation foncière:</label>
+      <input type="text" id="conservation" name="conservation" required />
+
+      <label for="numeroTitre">Numéro titre:</label>
+      <input type="text" id="numeroTitre" name="numeroTitre" required />
+
+      <label for="indice">Indice:</label>
+      <input type="text" id="indice" name="indice" required />
+
+      <label for="indiceSpecial">Indice spécial:</label>
+      <input type="text" id="indiceSpecial" name="indiceSpecial" />
+
+      <label for="captcha">Captcha: <span id="captcha-question"></span></label>
+      <input type="text" id="captcha" name="captcha" required />
+
+      <div class="modal-actions">
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+        <button type="button" class="btn btn-secondary" id="closeModalBtn">Annuler</button>
+      </div>
+    </form>
   </div>
 </div>
+</div>
+</div>
+<script>
+  // Simple captcha generator
+  function generateCaptcha() {
+    const a = Math.floor(Math.random() * 10) + 1;
+    const b = Math.floor(Math.random() * 10) + 1;
+    document.getElementById('captcha-question').textContent = `${a} + ${b} = ?`;
+    return a + b;
+  }
+
+  let captchaAnswer = 0;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.new-title-btn').onclick = function() {
+      document.getElementById('addTitreModal').style.display = 'flex';
+      captchaAnswer = generateCaptcha();
+    };
+
+    document.getElementById('closeModalBtn').onclick = function() {
+      document.getElementById('addTitreModal').style.display = 'none';
+      document.getElementById('addTitreForm').reset();
+    };
+
+    document.getElementById('addTitreForm').onsubmit = function(e) {
+      e.preventDefault();
+      const captchaInput = document.getElementById('captcha').value;
+      if (parseInt(captchaInput) !== captchaAnswer) {
+        alert('Captcha incorrect !');
+        return;
+      }
+      // Handle form submission here (e.g., send data to backend)
+      alert('Titre foncier ajouté !');
+      document.getElementById('addTitreModal').style.display = 'none';
+      document.getElementById('addTitreForm').reset();
+    };
+  });
+</script>
