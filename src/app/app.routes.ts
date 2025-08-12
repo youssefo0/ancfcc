@@ -5,7 +5,7 @@ import { ConfirmationPageComponent } from './confirmation-page/confirmation-page
 import { UserDashboard } from './user-dashboard/user-dashboard';
 import { PersonalInfo } from './components/personal-info/personal-info';
 import { TitreFoncierComponent } from './components/titre-foncier/titre-foncier';
-import { Historique } from './historique/historique';
+
 
 
 
@@ -17,6 +17,6 @@ export const routes: Routes = [
   { path: 'titre-foncier', component: TitreFoncierComponent },
   { path: 'signup', component: SignupPageComponent },
   { path: 'confirmation', component: ConfirmationPageComponent },
-  { path: 'historique', component: Historique },
+  
   { path: '**', redirectTo: '/login' }
 ];

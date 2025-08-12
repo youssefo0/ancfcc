@@ -64,8 +64,7 @@ export class TitreFoncierComponent {
   }
 
   logout(): void {
-    // Implement your logout logic here, e.g., clear session, navigate to login
-    alert('Logging out...');
+    
     this.router.navigate(['/login']); // Example: navigate to login page after logout
   }
 }
